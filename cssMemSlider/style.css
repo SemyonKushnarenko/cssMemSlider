@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --width-mobile: 90%;
+    --width-display: 70%;
+    --height-display: 80vh;
+}
+.hidden {
+    visibility: hidden;
+}
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #111;
+}
+.container {
+    width: var(--width-display);
+    height: var(--height-display);
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    row-gap: 15px;
+}
+.slider {
+    width: 100%;
+    height: var(--height-display);
+    overflow: hidden;
+}
+.slider-wrapper {
+    width: 400%;
+    height: calc(100% - 20px - 2.5rem);
+    display: flex;
+    flex-direction: row;
+    transition: all .2s ease
+}
+.img {
+    width: 25%;
+    background-image: url("assets/img/calyvan.jpg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: contain;
+}
+.img.img2 {
+    background-image: url("assets/img/html.png");
+}
+.img.img3 {
+    background-image: url("assets/img/mms.jpg");
+}
+.img.img4 {
+    background-image: url("assets/img/builder.jpg");
+}
+.text-wrapper {
+    width: 70%;
+    overflow: hidden;
+    height: 2.5rem;
+}
+.texts {
+    color: #edd;
+    font-size: 1.9vw;
+    line-height: 2.5rem;
+    transition: all .2s ease-in;
+}
+.text {
+    height: 2.5rem;
+}
+.labels {
+    display: flex;
+}
+.label {
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.label span {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 3px solid #33d;
+    background-color: #33d;
+    transition: all .2s ease-out;
+}
+.label:hover span {
+    background-color: rgb(197, 178, 178) !important;
+}
+#btn1:checked ~ .container .labels .label1 span {
+    background-color: #1a3;
+    border-color: #1a3;
+}
+#btn2:checked ~ .container .labels .label2 span {
+    background-color: #1a3;
+    border-color: #1a3;
+}
+#btn3:checked ~ .container .labels .label3 span {
+    background-color: #1a3;
+    border-color: #1a3;
+}
+#btn4:checked ~ .container .labels .label4 span {
+    background-color: #1a3;
+    border-color: #1a3;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+#btn1:checked ~ .container .slider .slider-wrapper {
+    margin-left: 0;
+}
+
+#btn2:checked ~ .container .slider .slider-wrapper {
+    margin-left: -100%;
+}
+
+#btn3:checked ~ .container .slider .slider-wrapper {
+    margin-left: -200%;
+}
+
+#btn4:checked ~ .container .slider .slider-wrapper {
+    margin-left: -300%;
+}
+
+#btn1:checked ~ .container .text-wrapper .texts{
+    margin-top: 0;
+}
+
+#btn2:checked ~ .container .text-wrapper .texts{
+    margin-top: -2.5rem;
+}
+
+#btn3:checked ~ .container .text-wrapper .texts{
+    margin-top: -5rem;
+}
+
+#btn4:checked ~ .container .text-wrapper .texts{
+    margin-top: -7.5rem;
+}
