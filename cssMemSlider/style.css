@@ -23,15 +23,15 @@ body {
 }
 .container {
     width: var(--width-display);
-    height: var(--height-display);
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
     row-gap: 15px;
+    height: var(--height-display);
 }
 .slider {
     width: 100%;
-    height: calc(100% - 20px - 2.5rem);
+    height: 80%;
     overflow: hidden;
 }
 .slider-wrapper {
@@ -43,6 +43,7 @@ body {
 }
 .img {
     width: 25%;
+    background-color: #fff;
     background-image: url("assets/img/calyvan.jpg");
     background-repeat: no-repeat;
     background-position: 50% 50%;
@@ -58,18 +59,18 @@ body {
     background-image: url("assets/img/builder.jpg");
 }
 .text-wrapper {
-    display: inline-block;
     overflow: hidden;
-    height: 2.5rem;
+    width: 70%;
 }
 .texts {
     color: #edd;
     font-size: 2rem;
-    line-height: 2.5rem;
+    display: flex;
     transition: all .2s ease-in;
+    width: 400%;
 }
 .text {
-    height: 2.5rem;
+    width: 25%;
 }
 .labels {
     display: flex;
@@ -115,14 +116,14 @@ body {
         flex-flow: column nowrap;
         justify-content: center;
         align-items: center;
-        height: 400px;
+        height: var(--height-display);
     }
     .text-wrapper {
         order: 2;
     }
     .text {
         text-align: center;
-        font-size: 1rem;
+        font-size: 2rem;
     }
 }
 #btn1:checked ~ .container .slider .slider-wrapper {
@@ -142,17 +143,17 @@ body {
 }
 
 #btn1:checked ~ .container .text-wrapper .texts{
-    margin-top: 0;
+    margin-left: 0;
 }
 
 #btn2:checked ~ .container .text-wrapper .texts{
-    margin-top: -2.5rem;
+    margin-left: -100%;
 }
 
 #btn3:checked ~ .container .text-wrapper .texts{
-    margin-top: -5rem;
+    margin-left: -200%;
 }
 
 #btn4:checked ~ .container .text-wrapper .texts{
-    margin-top: -7.5rem;
+    margin-left: -300%;
 }
