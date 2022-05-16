@@ -117,6 +117,9 @@ body {
         align-items: center;
         height: 400px;
     }
+    .text-wrapper {
+        order: 2;
+    }
     .text {
         text-align: center;
         font-size: 1rem;
