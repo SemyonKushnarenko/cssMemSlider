@@ -120,6 +120,7 @@ body {
     }
     .text-wrapper {
         order: 2;
+        align-self: flex-start;
     }
     .text {
         text-align: center;
